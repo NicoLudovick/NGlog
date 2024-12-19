@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Espace Client - Paiement</title>
+    <link rel="stylesheet" href="mainClient.css">
+</head>
+<body>
+    <div class="container">
+        <div class="background"></div>
+
+        <header>
+            <h1 class="title">Paiement en Ligne</h1>
+        </header>
+
+        <main>
+            <button onclick="window.location.href='create-order.html'" class="back-btn">Accueil</button>
+           <!-- <button onclick="window.location.href='client-dashboard.html'" class="back-btn">Retour</button> -->
+
+            <form class="form-container">
+                <label for="order-number">Numéro Commande :</label>
+                <input type="text" id="order-number" name="order-number" placeholder="Ex : CMD12345" required>
+
+                <label for="payment-method">Mode de Paiement :</label>
+                <select id="payment-method" name="payment-method" required>
+                    <option value="stripe">Carte Bancaire (Stripe)</option>
+                    <option value="paypal">PayPal</option>
+                    <option value="orange-money">Orange Money Cameroun</option>
+                </select>
+
+                <label for="amount">Montant à Payer (€) :</label>
+                <input type="number" id="amount" name="amount" placeholder="Montant total" required>
+
+                <button type="submit" class="submit-btn">Valider Paiement</button>
+            </form>
+
+            <div class="payment-result" id="payment-result" style="display: none;">
+                <h2>Résultat du Paiement</h2>
+                <p id="result-text">Paiement en attente...</p>
+            </div>
+        </main>
+
+        <footer>
+            <p>&copy; 2024 NGN. Tous droits réservés.</p>
+        </footer>
+    </div>
+
+    <script>
+        document.querySelector("form").addEventListener("submit", function(event) {
+            event.preventDefault(); // Empêche l'envoi du formulaire
+
+            const paymentMethod = document.querySelector("#payment-method").value;
+            const orderNumber = document.querySelector("#order-number").value;
+            const amount = document.querySelector("#amount").value;
+
+            const paymentResult = document.querySelector("#payment-result");
+            const resultText = document.querySelector("#result-text");
+
+            // Simulation simple du paiement
+            if (paymentMethod && orderNumber && amount > 0) {
+                resultText.textContent = `Paiement validé ! 
+                - Commande : ${orderNumber} 
+                - Montant : ${amount} € 
+                - Méthode : ${paymentMethod === "orange-money" ? "Orange Money Cameroun" : paymentMethod.toUpperCase()}`;
+                paymentResult.style.display = "block";
+            } else {
+                resultText.textContent = "Erreur lors du paiement. Veuillez vérifier vos informations.";
+                paymentResult.style.display = "block";
+            }
+        });
+    </script>
+</body>
+</html>

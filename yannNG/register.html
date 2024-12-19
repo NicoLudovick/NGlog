@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Espace Client - Inscription</title>
+    <link rel="stylesheet" href="mainClient.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Image de fond -->
+        <div class="background">
+            <img src="NGN Custom.png" alt="">
+        </div>
+
+        <!-- Contenu principal -->
+        <header>
+            <h1 class="title">Créer Espace Abonné</h1>
+        </header>
+
+        <main>
+            <form class="form-container">
+                <label for="first-name">Prénom :</label>
+                <input type="text" id="first-name" name="first-name" placeholder="Votre prénom">
+
+                <label for="last-name">Nom :</label>
+                <input type="text" id="last-name" name="last-name" placeholder="Votre nom">
+
+                <label for="address">Adresse :</label>
+                <input type="text" id="address" name="address" placeholder="Votre adresse">
+
+                <label for="postal-code">Code Postal :</label>
+                <input type="text" id="postal-code" name="postal-code" placeholder="Votre code postal">
+
+                <label for="city">Ville :</label>
+                <input type="text" id="city" name="city" placeholder="Votre ville">
+
+                <label for="email">Email :</label>
+                <input type="email" id="email" name="email" placeholder="Votre email">
+
+                <label for="phone">Téléphone :</label>
+                <input type="text" id="phone" name="phone" placeholder="Votre numéro de téléphone">
+
+                <label for="password">Créer un mot de passe :</label>
+                <input type="password" id="password" name="password" placeholder="Mot de passe">
+
+                <label for="confirm-password">Confirmer mot de passe :</label>
+                <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirmer mot de passe">
+
+                <button type="submit" class="submit-btn">Register</button>
+            </form>
+
+            <button onclick="window.location.href='client.html'" class="back-btn">Retour</button>
+        </main>
+
+        <footer>
+            <p>&copy; 2024 NGN. Tous droits réservés.</p>
+        </footer>
+    </div>
+</body>
+</html>

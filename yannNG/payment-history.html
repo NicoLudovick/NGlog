@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Historique des Paiements - NGN</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="background"></div>
+
+        <header>
+            <h1 class="title">Historique des Paiements</h1>
+        </header>
+
+        <main>
+            <button onclick="window.location.href='client.html'" class="back-btn">Accueil</button>
+            <button onclick="window.location.href='client-dashboard.html'" class="back-btn">Retour</button>
+
+            <table class="payment-table">
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Numéro Commande</th>
+                        <th>Montant (€)</th>
+                        <th>Méthode</th>
+                        <th>Statut</th>
+                    </tr>
+                </thead>
+                <tbody id="payment-history">
+                    <tr>
+                        <td>2024-12-01</td>
+                        <td>CMD12345</td>
+                        <td>150.00</td>
+                        <td>Stripe</td>
+                        <td>Validé</td>
+                    </tr>
+                    <tr>
+                        <td>2024-12-02</td>
+                        <td>CMD12346</td>
+                        <td>200.00</td>
+                        <td>Orange Money</td>
+                        <td>En attente</td>
+                    </tr>
+                </tbody>
+            </table>
+        </main>
+
+        <footer>
+            <p>&copy; 2024 NGN. Tous droits réservés.</p>
+        </footer>
+    </div>
+</body>
+</html>

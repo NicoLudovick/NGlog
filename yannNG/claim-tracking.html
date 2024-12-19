@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suivi des Réclamations</title>
+    <link rel="stylesheet" href="support.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Image de fond -->
+        <div class="background">
+            <img src="NGN Custom.png" alt="">
+        </div>
+
+        <!-- Contenu principal -->
+        <header>
+            <h1 class="title">Suivi des Réclamations</h1>
+        </header>
+
+        <main>
+            <form class="form-container">
+                <label for="ticket-id">Numéro de Ticket :</label>
+                <input type="text" id="ticket-id" name="ticket-id" placeholder="Ex : TICKET123" required>
+
+                <button type="submit" class="submit-btn">Rechercher</button>
+            </form>
+
+            <div class="tracking-result" id="tracking-result" style="display: none;">
+                <h2>Résultat du Suivi</h2>
+                <p id="result-text">Ticket non trouvé. Vérifiez le numéro de ticket.</p>
+            </div>
+            <div>
+                <button onclick="window.location.href='support.html'" class="back-btn">Retour</button>
+            </div>
+        </main>
+
+        <footer>
+            <p>&copy; 2024 NGN. Tous droits réservés.</p>
+        </footer>
+
+    <script>
+        document.querySelector("form").addEventListener("submit", function(event) {
+            event.preventDefault(); // Empêche l'envoi du formulaire
+
+            const ticketId = document.querySelector("#ticket-id").value;
+            const trackingResult = document.querySelector("#tracking-result");
+            const resultText = document.querySelector("#result-text");
+
+            if (ticketId === "TICKET123") {
+                resultText.textContent = `Ticket trouvé : 
+                - Numéro : ${ticketId}
+                - Statut : En cours de traitement 
+                - Date d'ouverture : 15 décembre 2024.`;
+                trackingResult.style.display = "block";
+            } else {
+                resultText.textContent = "Ticket non trouvé. Vérifiez le numéro de ticket.";
+                trackingResult.style.display = "block";
+            }
+        });
+    </script>
+    </div>
+</body>
+</html>

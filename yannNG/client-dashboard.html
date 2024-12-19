@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Espace Client - Tableau de Bord</title>
+    <link rel="stylesheet" href="mainClient.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Image de fond -->
+        <div class="background">
+            <img src="NGN Custom.png" alt="">
+        </div>
+
+        <!-- Contenu principal -->
+        <header>
+            <h1 class="title">Tableau de Bord</h1>
+        </header>
+
+        <main>
+            <button onclick="window.location.href='client.html'" class="back-btn">Accueil</button>
+            <button onclick="window.location.href='register.html'" class="back-btn">Retour</button>
+            <button onclick="window.location.href='notifications.html'">Notifications</button>
+            <button onclick="window.location.href='payment-history.html'">Historique de Paiements</button>
+
+            <form class="form-container">
+                <label for="order-number">Numéro Commande :</label>
+                <input type="text" id="order-number" name="order-number" placeholder="Ex : CMD12345">
+
+                <label for="client-id">ID Client :</label>
+                <input type="text" id="client-id" name="client-id" placeholder="Votre ID">
+
+                <label for="order-status">Suivi :</label>
+                <input type="text" id="order-status" name="order-status" placeholder="Statut de la commande">
+
+                <label for="order-date">Date de Création :</label>
+                <input type="date" id="order-date" name="order-date">
+
+                <label for="delivery-date">Date Estimée de Livraison :</label>
+                <input type="date" id="delivery-date" name="delivery-date">
+
+                <button type="submit" class="submit-btn">Rechercher Commande</button>
+                
+            </form>
+            <div>
+                <button onclick="window.location.href='support.html'" class=""> Reclamation</button>
+            </div>
+        </main>
+
+        <footer>
+            <p>&copy; 2024 NGN. Tous droits réservés.</p>
+        </footer>
+    </div>
+</body>
+</html>

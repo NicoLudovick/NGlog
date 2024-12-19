@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Réclamation</title>
+    <link rel="stylesheet" href="support.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Image de fond -->
+        <div class="background"></div>
+
+        <!-- Contenu principal -->
+        <header>
+            <h1 class="title">Support Client</h1>
+        </header>
+
+        <main>
+            <h2>Soumettre une Réclamation</h2>
+
+            <form class="form-container">
+                <label for="order-id">Numéro de Commande :</label>
+                <input type="text" id="order-id" name="order-id" placeholder="Ex : CMD12345" required>
+
+                <label for="claim-type">Type de Réclamation :</label>
+                <select id="claim-type" name="claim-type" required>
+                    <option value="colis-perdu">Colis Perdu</option>
+                    <option value="retard-livraison">Retard de Livraison</option>
+                    <option value="colis-endommage">Colis Endommagé</option>
+                </select>
+
+                <label for="details">Détails de la Réclamation :</label>
+                <textarea id="details" name="details" rows="5" placeholder="Expliquez votre problème ici..." required></textarea>
+
+                <label for="email">Votre Email :</label>
+                <input type="email" id="email" name="email" placeholder="Votre adresse email" required>
+
+                <button type="submit" class="submit-btn">Soumettre</button>
+            </form>
+            <div>
+                <button onclick="window.location.href='client-dashboard.html'" class="back-btn">Retour</button>
+            </div>
+        </main>
+
+        <footer>
+            <p>&copy; 2024 NGN. Tous droits réservés.</p>
+        </footer>
+    </div>
+</body>
+</html>

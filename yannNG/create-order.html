@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Espace Client - Créer Commande</title>
+    <link rel="stylesheet" href="mainClient.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Image de fond -->
+        <div class="background">
+            <img src="NGN Custom.png" alt="">
+        </div>
+
+        <!-- Contenu principal -->
+        <header>
+            <h1 class="title">Créer Commande</h1>
+        </header>
+
+        <main>
+            
+            <form class="form-container">
+            <ul>
+                <li><label for="description">Description :</label>
+                <textarea id="description" name="description" rows="4" placeholder="Description du colis"></textarea></li>
+
+                <li><label for="photo">Photo du Colis :</label>
+                <input type="file" id="photo" name="photo"></li>
+
+                <li><label for="shipment-date">Date d'expédition :</label>
+                <input type="date" id="shipment-date" name="shipment-date"></li>
+
+                <li><label for="shipment-time">Heure d'expédition :</label>
+                <input type="time" id="shipment-time" name="shipment-time"></li>
+
+                <li><label for="size">Taille du Colis :</label>
+                <input type="text" id="size" name="size" placeholder="Lourd / Léger / Lettre"></li>
+
+                <li><label for="destination">Destination :</label>
+                <input type="text" id="destination" name="destination" placeholder="Douala / Yaounde"></li>
+
+                <li><label for="recipient">Destinataire :</label>
+                <input type="text" id="recipient" name="recipient" placeholder="Nom et prénom"></li>
+
+                <li><label for="recipient-phone">Téléphone Destinataire :</label>
+                <input type="text" id="recipient-phone" name="recipient-phone" placeholder="Téléphone"></li>
+
+                <label>Recevoir des notifications :</label>
+                <div>
+                    <input type="checkbox" id="notify-france" name="notify-france">
+                    <label for="notify-france">France</label>
+
+                    <input type="checkbox" id="notify-Cameroun" name="notify-Cameroun">
+                    <label for="notify-cameroun">Cameroun</label>
+                </div>
+
+                <button type="submit" class="submit-btn">Créer</button>
+            </ul> 
+            </form>
+
+            <button onclick="window.location.href='client.html'" class="back-btn">Retour</button>
+        </main>
+
+        <footer>
+            <p>&copy; 2024 NGN. Tous droits réservés.</p>
+        </footer>
+    </div>
+</body>
+</html>

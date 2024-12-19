@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil</title>
+    <link rel="stylesheet" href="mainClient.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Image de fond -->
+        <div class="background">
+            <img src="NGN Custom.png" alt="">
+        </div>
+
+        <!-- Contenu principal -->
+        <header>
+            <h1 class="title">informations personnelles</h1>
+        </header>
+
+        <main>
+            <div>
+                <button onclick="window.location.href='client.html'" class="back-btn">Accueil</button>
+                <button onclick="window.location.href='client-dashboard.html'" class="back-btn">Retour</button>
+            </div>
+
+            <form class="form-container">
+                <label for="client-id">ID Client :</label>
+                <input type="text" id="client-id" name="client-id" placeholder="Votre ID">
+
+                <label for="first-name">Prénom :</label>
+                <input type="text" id="first-name" name="first-name" placeholder="Votre prénom">
+
+                <label for="last-name">Nom :</label>
+                <input type="text" id="last-name" name="last-name" placeholder="Votre nom">
+
+                <label for="address">Adresse :</label>
+                <input type="text" id="address" name="address" placeholder="Votre adresse">
+
+                <label for="postal-code">Code Postal :</label>
+                <input type="text" id="postal-code" name="postal-code" placeholder="Votre code postal">
+
+                <label for="city">Ville :</label>
+                <input type="text" id="city" name="city" placeholder="Votre ville">
+
+                <label for="email">Email :</label>
+                <input type="email" id="email" name="email" placeholder="Votre email">
+
+                <label for="phone">Téléphone :</label>
+                <input type="text" id="phone" name="phone" placeholder="Votre numéro de téléphone">
+
+            
+            <button type="submit" class="submit-btn">Supprimer compte</button>
+            
+            <button type="submit" class="submit-btn">Enregistrer</button>
+               
+            </form>
+        </main>
+
+        <footer>
+            <p>&copy; 2024 NGN. Tous droits réservés.</p>
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajouter un Employé</title>
+    <link rel="stylesheet" href="employee-edit.css">
+</head>
+<body>
+    <div class="container">
+         <!-- Image de fond -->
+         <div class="background">
+            <img src="NGN Custom.png" alt="">
+        </div>
+        <header>
+            <h1 class="title">Ajouter un Employé</h1>
+        </header>
+
+        <main>
+            <form class="form-container">
+                <label for="nom">Nom :</label>
+                <input type="text" id="nom" name="nom" required>
+
+                <label for="prenom">Prénom :</label>
+                <input type="text" id="prenom" name="prenom" required>
+
+                <label for="email">Email :</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="role">Rôle :</label>
+                <select id="role" name="role">
+                    <option value="superviseur">Superviseur</option>
+                    <option value="agent_transport">Agent de Transport</option>
+                    <option value="agent_magasinier">Agent Magasinier</option>
+                </select>
+
+                <button type="submit" class="submit-btn">Enregistrer</button>
+                <button onclick="window.location.href='employee-set.html'" class="back-btn">Retour</button>
+            </form>
+        </main>
+
+        <footer>
+            <p>&copy; 2024 NGN. Tous droits réservés.</p>
+        </footer>
+    </div>
+</body>
+</html>

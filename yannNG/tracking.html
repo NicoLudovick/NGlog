@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tracking Commande</title>
+    <link rel="stylesheet" href="mainEmploye.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Image de fond -->
+        <div class="background">
+            <img src="NGN Custom.png" alt="">
+        </div>
+
+        <!-- Contenu principal -->
+        <header>
+            <h1 class="title">Suivi de Commande</h1>
+        </header>
+
+        <main>
+            <button onclick="window.location.href='client.html'" class="back-btn">Accueil</button>
+            <button onclick="window.location.href='client-dashboard.html'" class="back-btn">Retour</button>
+
+            <form class="tracking-form">
+                <label for="tracking-id">Tracking ID :</label>
+                <input type="text" id="tracking-id" name="tracking-id" placeholder="Ex : 123456" required>
+
+                <button type="submit" class="submit-btn">Suivre Commande</button>
+            </form>
+
+            <div class="tracking-result" id="tracking-result" style="display: none;">
+                <h2>Résultat du suivi</h2>
+                <p id="result-text">Commande non trouvée. Vérifiez l'ID de suivi.</p>
+            </div>
+        </main>
+
+        <footer>
+            <p>&copy; 2024 NGN. Tous droits réservés.</p>
+        </footer>
+    </div>
+
+    <script>
+        // Simulation d'une recherche de commande
+        document.querySelector("form").addEventListener("submit", function(event) {
+            event.preventDefault(); // Empêche l'envoi du formulaire
+
+            const trackingId = document.querySelector("#tracking-id").value;
+            const trackingResult = document.querySelector("#tracking-result");
+            const resultText = document.querySelector("#result-text");
+
+            // Simule une recherche simple (exemple fictif)
+            if (trackingId === "123456") {
+                resultText.textContent = `Commande trouvée : 
+                - ID : ${trackingId} 
+                - Statut : En transit 
+                - Date estimée de livraison : 20 décembre 2024.`;
+                trackingResult.style.display = "block";
+            } else {
+                resultText.textContent = "Commande non trouvée. Vérifiez l'ID de suivi.";
+                trackingResult.style.display = "block";
+            }
+        });
+    </script>
+</body>
+</html>

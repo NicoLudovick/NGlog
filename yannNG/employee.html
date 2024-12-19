@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NGN - Espace Employé</title>
+    <link rel="stylesheet" href="mainEmploye.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Image de fond -->
+        <div class="background">
+            <img src="NGN Custom.png" alt="">
+        </div>
+
+        <!-- Contenu principal -->
+        <header>
+            <h1 class="title">Espace Employé</h1>
+        </header>
+
+        <main>
+            <div class="buttons">
+                <button onclick="window.location.href='index.html'">Accueil</button>
+                <button onclick="window.location.href='employee-set.html'">Gestion</button>
+                
+            </div>
+            <div><button>Identification</button>
+            </div>
+            <div>
+            <label for="id-employee">ID employee :</label>
+                <input type="text" id="id-employee" name="id-employee" placeholder="Ex : 12345">
+                <button onclick="window.location.href='employee-identification.html'" type="submit" class="submit-btn">Valider</button>
+            </div>    
+        </main>
+
+        <footer>
+            <p>&copy; 2024 NGN. Tous droits réservés.</p>
+        </footer>
+    </div>
+</body>
+</html>

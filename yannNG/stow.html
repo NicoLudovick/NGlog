@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NGN - Stow</title>
+    <link rel="stylesheet" href="mainEmploye.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Image de fond -->
+        <div class="background">
+            <img src="NGN Custom.png" alt="">
+        </div>
+
+        <!-- Contenu principal -->
+        <header>
+            <h1 class="title">Stow</h1>
+        </header>
+
+        <main>
+            <div>
+                <button onclick="window.location.href='employee-identification.html'" class="back-btn">Espace Employé</button>
+            </div>
+            <button onclick="window.location.href='collect.html'" class="back-btn">Retour</button>
+            <button onclick="window.location.href='employee-identification.html'" class="back-btn">Accueil</button>
+
+            <form class="form-container">
+                <label for="id-colis">ID Colis :</label>
+                <input type="text" id="id-colis" name="id-colis" placeholder="Ex : 12345">
+
+                <label for="statut">Statut :</label>
+                <input type="text" id="statut" name="statut" placeholder="Réceptionné / Non réceptionné">
+
+                <label for="destination">Destination :</label>
+                <input type="text" id="destination" name="destination" placeholder="Douala / Yaounde">
+
+                <label for="destinataire">Destinataire :</label>
+                <input type="text" id="destinataire" name="destinataire" placeholder="Nom Prénom">
+
+                <label for="categorie">Catégorie :</label>
+                <input type="text" id="categorie" name="categorie" placeholder="Boisson / Vêtements">
+
+                <label for="date-stow">Date Stow :</label>
+                <input type="date" id="date-stow" name="date-stow">
+
+                <button type="submit" class="submit-btn">Valider</button>
+            </form>
+        </main>
+
+        <footer>
+            <p>&copy; 2024 NGN. Tous droits réservés.</p>
+        </footer>
+    </div>
+</body>
+</html>

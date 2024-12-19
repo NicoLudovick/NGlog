@@ -1,0 +1,132 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    text-align: center;
+    padding: 2rem;
+}
+
+.background {
+    background-image: url('background.jpg');
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    filter: brightness(0.7);
+}
+
+.title {
+    font-size: 2.5rem;
+    color: white;
+    margin-bottom: 2rem;
+}
+
+/* Formulaire de Connexion */
+.form-container {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 2rem;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 500px;
+    margin: auto;
+}
+
+.form-container label {
+    font-size: 1.2rem;
+    margin-top: 1rem;
+    display: block;
+}
+
+.form-container input {
+    width: 100%;
+    padding: 0.8rem;
+    margin-top: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 0.8rem;
+    margin-top: 1.5rem;
+    font-size: 1.2rem;
+    background: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Chat Principal */
+.chat-container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.chat-header, .chat-input {
+    background: #007BFF;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+.chat-window {
+    flex: 1;
+    padding: 1rem;
+    background: white;
+    overflow-y: auto;
+}
+
+.chat-window .message {
+    margin: 0.5rem 0;
+    padding: 1rem;
+    border-radius: 8px;
+    width: fit-content;
+    max-width: 70%;
+}
+
+.message.sent {
+    background: #e0f7fa;
+    align-self: flex-end;
+}
+
+.message.received {
+    background: #f1f1f1;
+    align-self: flex-start;
+}
+
+/* Historique des Conversations */
+/*.chat-history .chat-log {
+    background: white;
+    padding: 2rem;
+    margin: 1rem;
+    border-radius: 8px;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .chat-header, .chat-input {
+        padding: 0.5rem;
+    }
+
+    .form-container {
+        padding: 1.5rem;
+    }
+
+    .title {
+        font-size: 1.8rem;
+    }
+}

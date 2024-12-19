@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notifications</title>
+    <link rel="stylesheet" href="notifications.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Image de fond -->
+        <div class="background">
+            <img src="NGN Custom.png" alt="">
+        </div>
+
+        <!-- Contenu principal -->
+        <header>
+            <h1 class="title">Historique des Notifications</h1>
+        </header>
+
+        <main>
+            <button onclick="window.location.href='client.html'" class="back-btn">Accueil</button>
+            <button onclick="window.location.href='client-dashboard.html'" class="back-btn">Retour</button>
+
+            <div class="notifications-list">
+                <div class="notification-item">
+                    <h3>Commande #12345</h3>
+                    <p><strong>Statut :</strong> Colis expédié</p>
+                    <p><strong>Date :</strong> 15 décembre 2024 - 14h30</p>
+                </div>
+
+                <div class="notification-item">
+                    <h3>Commande #67890</h3>
+                    <p><strong>Statut :</strong> Colis réceptionné en entrepôt</p>
+                    <p><strong>Date :</strong> 14 décembre 2024 - 10h45</p>
+                </div>
+
+                <div class="notification-item">
+                    <h3>Commande #34567</h3>
+                    <p><strong>Statut :</strong> Livraison effectuée</p>
+                    <p><strong>Date :</strong> 13 décembre 2024 - 16h20</p>
+                </div>
+            </div>
+            <button onclick="window.location.href='notifications-settings.html'">Parametres</button>
+        </main>
+
+        <footer>
+            <p>&copy; 2024 NGN. Tous droits réservés.</p>
+        </footer>
+    </div>
+</body>
+</html>

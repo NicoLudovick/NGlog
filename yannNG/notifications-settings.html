@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paramètres de Notifications</title>
+    <link rel="stylesheet" href="notifications.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Image de fond -->
+        <div class="background">
+            <img src="NGN Custom.png" alt="">
+        </div>
+
+        <!-- Contenu principal -->
+        <header>
+            <h1 class="title">Paramètres de Notifications</h1>
+        </header>
+
+        <main>
+            <form class="form-container">
+                <label>Notification par Email :</label>
+                <input type="checkbox" id="notify-email" name="notify-email">
+                <label for="notify-email">Activer</label>
+
+                <label>Notification par SMS :</label>
+                <input type="checkbox" id="notify-sms" name="notify-sms">
+                <label for="notify-sms">Activer</label>
+
+                <label>Fréquence des Notifications :</label>
+                <select id="frequency" name="frequency">
+                    <option value="instant">Instantané</option>
+                    <option value="daily">Quotidien</option>
+                    <option value="weekly">Hebdomadaire</option>
+                </select>
+
+                <button type="submit" class="submit-btn">Enregistrer</button>
+            </form>
+
+            <button onclick="window.location.href='client-dashboard.html'" class="back-btn">Retour</button>
+        </main>
+
+        <footer>
+            <p>&copy; 2024 NGN. Tous droits réservés.</p>
+        </footer>
+    </div>
+</body>
+</html>

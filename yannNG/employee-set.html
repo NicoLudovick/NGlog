@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestion des Employés</title>
+    <link rel="stylesheet" href="employee-edit.css">
+</head>
+<body>
+    <div class="container">
+         <!-- Image de fond -->
+         <div class="background">
+            <img src="NGN Custom.png" alt="">
+        </div>
+        <header>
+            <h1 class="title">Liste des Employés</h1>
+        </header>
+
+        <main>
+            <button onclick="window.location.href='add-employee.html'" class="submit-btn">Ajouter un Employé</button>
+            <button onclick="window.location.href='employee.html'">Retour</button>
+
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nom</th>
+                        <th>Prénom</th>
+                        <th>Rôle</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>001</td>
+                        <td>Doe</td>
+                        <td>John</td>
+                        <td>Superviseur</td>
+                        <td>
+                            <button class="edit-btn">Modifier</button>
+                            <button class="delete-btn">Supprimer</button>
+                        </td>
+                    </tr>
+                    <!-- Exemple de données fictives -->
+                </tbody>
+            </table>
+        </main>
+
+        <footer>
+            <p>&copy; 2024 NGN. Tous droits réservés.</p>
+        </footer>
+    </div>
+</body>
+</html>

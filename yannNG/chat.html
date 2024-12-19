@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Support</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="chat-container">
+        <header class="chat-header">
+            <h2>Support Client</h2>
+            <button onclick="window.location.href='chat-login.html'" class="logout-btn">Déconnexion</button>
+        </header>
+
+        <main class="chat-window" id="chat-window">
+            <!-- Messages seront affichés ici dynamiquement -->
+        </main>
+
+        <footer class="chat-input">
+            <input type="text" id="chat-message" placeholder="Écrire un message...">
+            <button id="send-btn">Envoyer</button>
+        </footer>
+    </div>
+
+    <script>
+        const chatWindow = document.querySelector('#chat-window');
+        const chatMessage = document.querySelector('#chat-message');
+        const sendBtn = document.querySelector('#send-btn');
+
+        sendBtn.addEventListener('click', () => {
+            const message = chatMessage.value.trim();
+            if (message) {
+                const msgElement = document.createElement('div');
+                msgElement.classList.add('message', 'sent');
+                msgElement.textContent = message;
+                chatWindow.appendChild(msgElement);
+                chatMessage.value = '';
+                chatWindow.scrollTop = chatWindow.scrollHeight;
+            }
+        });
+    </script>
+</body>
+</html>
